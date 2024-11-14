@@ -148,7 +148,7 @@ jobs:
         cd $OPENWRT_PATH/bin/targets/*/*
         cat sha256sums
         cp $OPENWRT_PATH/.config build.config
-        mv -f $OPENWRT_PATH/bin/packages/*/*/*.ipk packages
+        mv -f $OPENWRT_PATH/bin/packages/*/*/*.apk packages
         tar -zcf Packages.tar.gz packages
         rm -rf packages feeds.buildinfo version.buildinfo
         echo "FIRMWARE_PATH=$PWD" >> $GITHUB_ENV
@@ -172,7 +172,7 @@ jobs:
         body: |
           **This is OpenWrt Firmware for ${{ env.FIRMWARE_TAG }}** (master分支，欢迎下载测试！)
           ### 📒 固件信息(带WIFI)
-          - 这是带WIFI以及NSS的6.6内核固件，默认主题为Argon；该固件在ImmortalWrt的基础上，添加了额外的软件包cpufreq、ddns、ttyd、upnp、wol、samba4、vlmcsd、aria2、autoreboot、uhttpd、wifischedule、frps、frpc、diskman、hd-idle、banip、acme、arpbind、usb-printer、homeproxy、alist、adguardhome、filebrowser、dockerman、gecoosac、lucky，并添加了若干工具，具体详见Arthur&Athena.config。
+          - 这是带WIFI以及NSS的6.6内核固件，默认主题为Argon；该固件在ImmortalWrt的基础上，添加了额外的软件包cpufreq、ddns、ttyd、upnp、wol、samba4、vlmcsd、aria2、autoreboot、uhttpd、wifischedule、frps、frpc、diskman、hd-idle、banip、acme、arpbind、usb-printer、homeproxy、alist、adguardhome、filebrowser、dockerman、gecoosac、lucky，并添加了若干工具，具体详见Taiyi.config。
           - 💻 这是 ${{ env.FIRMWARE_TAG }} 平台使用的 OpenWrt 固件
           - ⚽ 固件源码: ${{ env.REPO_URL }}
           - 💝 源码分支: ${{ env.REPO_BRANCH }}
